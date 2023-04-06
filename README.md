@@ -12,7 +12,7 @@ XMail is a browser extension designed to analyze the degree of spam in users' em
 
 `git clone https://github.com/NotokDay/XMail-SpamChecker.git`
 
-2. Upload it to Chrome as shown below.
+2. Upload the cloned folder to Chrome as shown below.
 
 <img src="https://github.com/NotokDay/XMail-SpamChecker/blob/main/gifs/installation.gif" width="750px">
 

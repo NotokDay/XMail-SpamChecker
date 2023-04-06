@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
 });
 
+function sleep(delay) {
+    var start = new Date().getTime();
+    while (new Date().getTime() < start + delay);
+}
+
 function checkAuthorized(){
     var session = localStorage.getItem('token');
     if(!session) return 0
@@ -368,7 +373,7 @@ function loadResetPage(){
                     }
                     console.log(response)
                     nofifyElem.innerHTML = '<p class="clean">Your password has been reset successfully.</p>'
-                    await setTimeout(myFunction, 1000);
+                    //sleep(1500)
                     loadLoginPage()
                 })
                 .catch(error => { 

@@ -8,23 +8,25 @@ XMail is a browser extension designed to analyze the degree of spam in users' em
 * File Scanner: All attachments are scanned for viruses, malware, and other security risks before you download them.
 
 ## Usage
-1. Clone the repository into your local machine:
+**1. Clone the repository into your local machine:**
 
 `git clone https://github.com/NotokDay/XMail-SpamChecker.git`
 
-2. Upload the cloned folder to Chrome as shown below.
+**2. Upload the cloned folder to Chrome as shown below.**
 
 <img src="https://github.com/NotokDay/XMail-SpamChecker/blob/main/gifs/installation.gif" width="750px">
 
-3. Register.
-<img src="https://github.com/NotokDay/XMail-SpamChecker/blob/main/gifs/register.gif" width="750px">
-*If you have not received an email after 2 minutes, please check your spam folder.*
+**3. Register.**
 
-4. Log in.
+<img src="https://github.com/NotokDay/XMail-SpamChecker/blob/main/gifs/register.gif" width="750px">
+_If you have not received an email after 2 minutes, please check your spam folder._
+
+
+**4. Log in.**
 <img src="https://github.com/NotokDay/XMail-SpamChecker/blob/main/gifs/login.gif" width="750px">
 
-5. If you forget your password, you can reset it. 
+**5. If you forget your password, you can reset it. **
 <img src="https://github.com/NotokDay/XMail-SpamChecker/blob/main/gifs/reset.gif" width="750px">
 
-6. Check your emails. 
+**6. Check your emails.** 
 <img src="https://github.com/NotokDay/XMail-SpamChecker/blob/main/gifs/demo.gif" width="750px">

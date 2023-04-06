@@ -18,7 +18,7 @@ XMail is a browser extension designed to analyze the degree of spam in users' em
 
 3. Register.
 <img src="https://github.com/NotokDay/XMail-SpamChecker/blob/main/gifs/register.gif" width="750px">
-
+*If you have not received an email after 2 minutes, please check your spam folder.
 4. Log in.
 <img src="https://github.com/NotokDay/XMail-SpamChecker/blob/main/gifs/login.gif" width="750px">
 

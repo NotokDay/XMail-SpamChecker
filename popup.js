@@ -1,5 +1,5 @@
 const secret = "6b647294775f31ff6feaf95a77661e3974fc6563b5cb65d6db35cba74a6e4f6d";
-const authServer = 'https://urchin-app-5xqlg.ondigitalocean.app';
+const authServer = 'http://192.168.127.132:443';
 
 document.addEventListener('DOMContentLoaded', () => {
     if(!checkAuthorized()){
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
 });
 
-function sleep(delay) {
+async function sleep(delay) {
     var start = new Date().getTime();
     while (new Date().getTime() < start + delay);
 }
@@ -249,7 +249,7 @@ function loadPassForgotPage(){
                     }
                     const data = await response.json();
                     console.log(response)
-                    nofifyElem.innerHTML = '<p class="clean">If your email is registered then you will receive an email.</p>'
+                    nofifyElem.innerHTML = '<p class="clean">If your email is registered then you will receive an OTP code.</p>'
                 })
                 .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);
@@ -332,7 +332,8 @@ const resetPageContent =
     <input type="text" name="otp" id="otp" placeholder="OTP">
     <input type="password" name="new_password" id="new_password" placeholder="New Password">
     <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password">
-    <button type="submit" id="submit">Reset Password</button>
+    <button type="submit" id="submit">Reset Password</button><br>
+    <!-- <a href="#" id="goBackButton2">Go back</a><br> -->
 </div>
 
 `
@@ -348,6 +349,13 @@ function loadResetPage(){
         const newPassword = document.getElementById('new_password').value;
         const confirmPassword = document.getElementById('confirm_password').value;
 
+        // const goBackButton = document.getElementById("goBackButton2")
+        // goBackButton.addEventListener("click", function(event){
+        //     event.preventDefault()
+        //     console.log('clicked')
+        //     loadLoginPage()
+        // })
+
         const nofifyElem = document.getElementById('notifyUser')
         if(email == ""){
             nofifyElem.innerHTML = '<p class="error">Please enter your email address.</p>'
@@ -355,7 +363,7 @@ function loadResetPage(){
         else{
             const encodedEmail = btoa(email)
             console.log(encodedEmail)
-
+            console.log(newPassword, confirmPassword)
             fetch(`${authServer}/api/auth/resetpassword`,{
                 method: "POST",
                 headers: {
@@ -367,14 +375,20 @@ function loadResetPage(){
                     newPassword: newPassword,
                     confirmPassword: confirmPassword
                 })
+                
             }).then(async response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
+                    // if (!response.ok) {
+                    //     throw new Error('Network response was not ok');
+                    // }
+                    var responseData = await response.json() 
+                    if(responseData.status === "error"){
+                        nofifyElem.innerHTML = '<p class="error">'+ responseData.message +'</p>';
+                    }else{
+                        nofifyElem.innerHTML = '<p class="clean">Your password has been reset successfully.</p>';
+                        setTimeout(() => {
+                            loadLoginPage();
+                        }, 2000);
                     }
-                    console.log(response)
-                    nofifyElem.innerHTML = '<p class="clean">Your password has been reset successfully.</p>'
-                    //sleep(1500)
-                    loadLoginPage()
                 })
                 .catch(error => { 
                     nofifyElem.innerHTML = '<p class="error">'+ error +'</p>';
@@ -790,8 +804,8 @@ function sendMailContentToModel(payload){
                 outputElem.innerHTML = outputElem.innerHTML.replace("Checking text...", "")
 
                 newElement = document.createElement('p')
-                newElement.textContent = 'Text is predicted to be spam.';
-                newElement.style.color = "orange";
+                newElement.textContent = 'Text is predicted to be clean.';
+                newElement.style.color = "green";
 
                 outputElem.appendChild(newElement);
             }

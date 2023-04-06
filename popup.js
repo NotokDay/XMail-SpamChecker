@@ -1,5 +1,5 @@
 const secret = "6b647294775f31ff6feaf95a77661e3974fc6563b5cb65d6db35cba74a6e4f6d";
-const authServer = 'http://192.168.127.132:443';
+const authServer = 'https://urchin-app-5xqlg.ondigitalocean.app';
 
 document.addEventListener('DOMContentLoaded', () => {
     if(!checkAuthorized()){
@@ -455,7 +455,7 @@ async function handleSuccessfulLogin(response) {
 async function handleSuccessfulRegister(response) {
     const data = await response.json();
     const notificationElem = document.getElementById("RegisterError")
-    notificationElem.innerHTML = '<p class="clean">' + data.data + '</p>'
+    notificationElem.innerHTML = '<p class="clean">' + data.message + '</p>'
 }
 
 

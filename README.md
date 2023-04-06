@@ -14,19 +14,19 @@ XMail is a browser extension designed to analyze the degree of spam in users' em
 
 **2. Upload the cloned folder to Chrome as shown below.**
 
-<img src="https://github.com/NotokDay/XMail-SpamChecker/blob/main/gifs/installation.gif" width="750px">
+<img src="https://github.com/NotokDay/XMail-SpamChecker/blob/main/gifs/installation.gif" width="750px"><br>
 
 **3. Register.**
 
-<img src="https://github.com/NotokDay/XMail-SpamChecker/blob/main/gifs/register.gif" width="750px">
-_If you have not received an email after 2 minutes, please check your spam folder._
+<img src="https://github.com/NotokDay/XMail-SpamChecker/blob/main/gifs/register.gif" width="750px"><br>
+_If you have not received an email after 2 minutes, please check your spam folder._ <br>
 
 
-**4. Log in.**
-<img src="https://github.com/NotokDay/XMail-SpamChecker/blob/main/gifs/login.gif" width="750px">
+**4. Log in.** <br>
+<img src="https://github.com/NotokDay/XMail-SpamChecker/blob/main/gifs/login.gif" width="750px"><br>
 
-**5. If you forget your password, you can reset it. **
-<img src="https://github.com/NotokDay/XMail-SpamChecker/blob/main/gifs/reset.gif" width="750px">
+**5. If you forget your password, you can reset it.** <br>
+<img src="https://github.com/NotokDay/XMail-SpamChecker/blob/main/gifs/reset.gif" width="750px"><br>
 
-**6. Check your emails.** 
-<img src="https://github.com/NotokDay/XMail-SpamChecker/blob/main/gifs/demo.gif" width="750px">
+**6. Check your emails.** <br>
+<img src="https://github.com/NotokDay/XMail-SpamChecker/blob/main/gifs/demo.gif" width="750px"><br>
